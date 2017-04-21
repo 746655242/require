@@ -1,0 +1,174 @@
+.picbox{ position:fixed; z-index:999; top:0; bottom:0; left:0; right:0;}
+.max-pic{ display:block !important; margin-bottom:.1rem !important; cursor:pointer;}
+.layer_bg{ position:fixed; top:0; bottom:0; left:0; right:0; background:#000; z-index:99999; display:none;}
+.max-pic{ display:block !important; margin-bottom:.1rem !important;}
+.layer_bg{ position:fixed; top:0; bottom:0; left:0; right:0; background:#000; z-index:99999; display:none;}
+.cy{ background:url(../img/cy.png); width:.24rem; height:.24rem; background-size:100%; margin:.1rem .08rem;}
+.im{overflow: hidden; overflow-y: scroll; -webkit-overflow-scrolling:touch; font-size:.12rem;}
+.im-time{ background:#d9d9d9; padding:.02rem .05rem; margin:.1rem auto; color:#fff; width:.5rem; text-align:center;}
+.im-mian{  padding-bottom:.75rem; overflow:hidden;}
+.im-news{padding:0 .1rem;margin-top:.1rem; position:relative; overflow:hidden;}
+.im-line{ min-height:.42rem; padding:0 .47rem; position:relative;}
+.im-icon{ position:absolute; top:0px; left:0; width:.3rem; height:.3rem; background:url(../img/b-pic.png); background-size:100%;}
+.im-icon img{ width:100%; height:100%; display:block;}
+.im-name{margin-bottom:.05rem; color:#999;}
+.im-text{ border:1px solid #e6e6e6; font-size:.15rem; color:#111; background:#fff; padding:.1rem; display:inline-block; position:relative; border-radius:.05rem;}
+.im-fr .im-icon{ right:0px; top:0px; left:inherit;}
+.im-fr .im-text{ background:#d0e8dc; color:#333; border:1px solid #3EB57A;}
+.im-fr .im-text img{ display:inline-block; vertical-align:middle; width:100%;}
+.im-fr .im-name{ text-align:right;}
+.im-fr .triangle,.im-fr .im-text span{  border-right: none;  border-left: 7px solid #d0e8dc; right:-7px; left:inherit;}
+.im-fr .im-text span{ right:-8px; border-left: 7px solid #168b51;}
+
+.suo{width: .14rem;height: .14rem;background:url(../img/suo.png) no-repeat;background-size:100% 100%;display: inline-block;vertical-align: middle;	}
+.ren{vertical-align: middle; font-style: normal;}
+.triangle,.im-text span{width: 0; height: 0; border-top: 5px solid transparent;border-right: 7px solid #fff;border-bottom: 5px solid transparent; position:absolute; left:-7px;z-index:2;}
+.im-text span { left: -8px;border-right: 7px solid #cfcfcf;z-index: 1;}
+.more-load{ background:url(../img/lgk.png) no-repeat; background-size:100%; width:.3rem; height:.3rem; margin:0 auto; 
+animation:myfirst 2s infinite linear;
+-moz-animation:myfirst 2s infinite linear; /* Firefox */
+-webkit-animation:myfirst 2s infinite linear; /* Safari and Chrome */
+-o-animation:myfirst 2s infinite linear;  /* Opera */}
+@keyframes myfirst
+{
+	0{transform: rotate(0deg);}
+	25% {transform: rotate(90deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+	0{-moz-transform: rotate(0deg);}
+	25% {-moz-transform: rotate(90deg);}
+	50% {-moz-transform: rotate(180deg);}
+	75% {-moz-transform: rotate(270deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	0{-webkit-transform: rotate(0deg);}
+	25% {-webkit-transform: rotate(90deg);}
+	50% {-webkit-transform: rotate(180deg);}
+	75% {-webkit-transform: rotate(270deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+	0{-o-transform: rotate(0deg);}
+	25% {-o-transform: rotate(90deg);}
+	50% {-o-transform: rotate(180deg);}
+	75% {-o-transform: rotate(270deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+
+.people-mian{ background:#fff; display:none;}
+.people-box{ padding-left:.1rem;}
+.people-box li { padding:.1rem 0; border-bottom:1px solid #e2e2e2;vertical-align:middle; font-size:.16rem; position:relative;}
+.people-pic{ width:.4rem; height:.4rem; display:inline-block; vertical-align:middle; margin-right:.1rem; border-radius:3px; overflow:hidden;}
+.people-pic img{ width:100%; height:100%;}
+.follow{ font-size:.12rem; padding: .05rem .12rem; border: 1px solid #d0d0d0; top: .15rem; right: .1rem;}
+.message{font-size:.12rem; margin: .1rem; background: #e2e2e2; border-radius:3px; padding: .1rem; color: #333;}
+.message span{ padding-right:.05rem; color:#08713c}
+
+
+
+.hei-bg{ position:fixed; top:0; bottom:0; left:0; right:0; background:rgba(0,0,0,.6); z-index:10; padding:0 .2rem; display:none;}
+.user-info{ background:#fff; margin-top:1rem; padding:.2rem; border-radius:5px; }
+.user-info input,.user-info select{  padding:.05rem; display:block; width:100%; margin-bottom:.1rem; border:1px solid #dfdfdf; font-size:.14rem;}
+.user-info .user-pic{ width:.8rem; height:.8rem; display:block; margin:.1rem auto; border:0; background-size:100%; border-radius:.4rem; position:relative;}
+.user-info .user-pic input{ width:100%; height:100%; display:block; opacity:0; margin:0; padding:0; position:absolute;}
+
+.userbtn{ padding:.05rem; cursor:pointer;}
+
+.mt-0{ margin-top:0;}
+/*上传*/
+
+#uppicBox {
+    display: none
+}
+
+#uppicBox,.imageBox {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999
+}
+
+.thumbBox {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: absolute;
+    top: 50%;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, .5)
+}
+
+#uppicBox .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.05);
+    font-size: .16rem;
+    color: #fff;
+    padding: .1rem 0;
+    z-index: 9999
+}
+
+#uppicBox .bottom span {
+    padding: .1rem;
+    display: inline-block
+}
+
+#uppicBox .fr {
+    float: right
+}
+
+#pic-img {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+#upimg{ width:100%; height:100%;}
+
+
+/*chat-list*/
+.chat-title-h2{ background:#fff; padding:.1rem; line-height:.2rem; height:.2rem; font-size:.16rem;}
+.chat-list-ul{padding:0 .05rem; overflow:hidden; background:#fff;}
+.chat-list-ul li{ padding:0 .05rem; width:50%; overflow:hidden; float:left; position:relative;}
+.chat-list-ul li a{ display:block; position:relative;}
+.chat-list-ul li img{ width:100%;}
+.img_title{position: absolute;
+    bottom: .3rem;
+    box-sizing:border-box;
+	line-height:.2rem; 
+    color: #fff;
+    padding-left: .05rem;
+    padding-right: .05rem;
+    font-size: .12rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; width:100%;
+    background: -webkit-gradient(linear,0 0,0 100%,from(rgba(0,0,0,0)),to(rgba(0,0,0,.6)));}
+.bot_title{ height:.3rem; background:#fff; font-size:.12rem; line-height:.3rem; padding:0 .05rem;}
+.people_number{ color:#00a350;}
+
+.chatbtn{ position:fixed; bottom:0; left:0; right:0; background:#fff; cursor:pointer; height:.4rem; line-height:.4rem;  text-align:center; color:#333; border-top:1px solid #e5e5e5; }
+.picw320{ width:1.6rem !important; height:.9rem !important;}
+
+.chat_c{ background:url(../img/collectionon_02.png) no-repeat; background-size:80% 80%;width: .24rem;height: .24rem;margin-top:.12rem}
+ 
+@media screen and (min-width: 800px){
+	.chat-list-ul li{ width:25%;}
+}
+
+@media screen and (min-width: 1200px){
+	.chat-list-ul li{ width:20%;}
+}
+ 

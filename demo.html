@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js模块加载器，并将模块反缓浏览器上，减少请求发送。</title>
+<script src="js/require.min.js" id="require" ></script>
+<script>
+require.config={
+	baseUrl: "js/",
+    urlArgs :'20170421',//测试模式(new Date()).getTime(), //附加在URL上参数，防止客户端缓存
+    paths: {
+        jquery:'js/jquery.min'
+    },
+	shim:{
+		jquery:'$'
+	}	
+};
+
+//加载样式
+var b=[
+	{time:'170337',path:'js/base.css'},
+	{time:'170337',path:'js/chat.css'}
+];
+require.css.init(b);
+
+//加载js
+require(['a','d','jquery'],function(A,D,$){
+	console.log('开始');
+	A.init();
+	D.init();
+	$('#top').html('加载器成功运行');
+	console.log('jquery加载')
+});
+
+
+</script>
+
+</head>
+
+<body>
+<div id="top"></div>
+<h1 style="color:red; font-size:30px; text-align:center">切记：请域名下才能运行<br>（如：http://localhost:80/demo.html）</h1>
+<pre>
+
+        1.简介
+        require.js 是简单模块加载器，支持异步加载，并将请求模块反缓浏览器（localStorage）上，达到减少请求。 
+        require.css加载css样式，并且将样式储存浏览器（localStorage）上，参数是多个对象组成数组, time时间戳，path路径
+        
+        2.使用           
+<textarea style="margin:10px 0 0 60px; width:700px; height:480px; border:0; padding:30px" >
+<script src="js/require.min.js" id="require" ></script>
+<script>
+require.config={
+	baseUrl: "js/",//公共路径
+	urlArgs : "20170421", //附加在URL上参数，防止客户端缓存， 测试模式用(new Date()).getTime()
+	paths: {//路径缩写
+		jquery:'js/jquery.min'
+	},
+	shim:{//不是正规define事件，配置
+		jquery:'$'
+	}	
+}
+
+//加载样式
+var b=[
+	{time:'170337',path:'js/base.css'},
+	{time:'170337',path:'js/chat.css'}
+];
+require.css.init(b);
+
+//加载js
+require(['a','d','jquery'],function(A,D,$){
+	console.log('开始');
+	A.init();
+	D.init();
+	$('#top').html('加载器成功运行');
+	console.log('jquery加载')
+});
+</script>
+</textarea>
+       
+        5.注意事项 
+        第一次加载 默认500毫秒开始回调，浏览器100毫秒回调
+        做ls反缓,资源都通xhr请求，所以会跨域，资源在同一下域名
+        兼容性，ie9及以上，功能减少网络请求
+
+        作者：带着乌龟去看大海  联系我进群(293851491)@群主
+ 
+</pre>
+
+
+
+</body>
+</html>
+
+
