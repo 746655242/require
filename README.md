@@ -47,4 +47,4 @@ require(['a','d','jquery'],function(A,D,$){
 
 
 切记：一定域名下才能运行，不然会跨域。。。后期还会优化
-（如：http://hemaj.com/works/demo.html）
+如：http://hemaj.com/works/demo.html
