@@ -47,5 +47,5 @@ require(['a','d','jquery'],function(A,D,$){
 兼容性，ie9及以上，功能减少网络请求
 
 
-切记：请域名下才能运行
-（如：http://localhost:80/demo.html）
+切记：一定域名下才能运行，不然会跨域。。。后期还会优化
+（如：http://hemaj.com/works/demo.html）
