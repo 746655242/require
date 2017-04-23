@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>js模块加载器，并将模块反缓浏览器上，减少请求发送。</title>
-<script src="js/require.min.js" id="require" ></script>
+<script src="js/require.2.0.min.js" id="require" ></script>
 <script>
 require.config={
 	baseUrl: "js/",
@@ -39,7 +39,7 @@ require(['a','d','jquery'],function(A,D,$){
 
 <body>
 <div id="top"></div>
-<h1 style="color:red; font-size:30px; text-align:center">切记：请域名下才能运行<br>（如：http://localhost:80/demo.html）</h1>
+<h1 style="color:red; font-size:30px; text-align:center">切记：请不要直接打开，请配置域名下才能运行<br>（如：http://localhost:80/demo.html）</h1>
 <pre>
 
         1.简介
@@ -80,10 +80,11 @@ require(['a','d','jquery'],function(A,D,$){
 </textarea>
        
         5.注意事项 
-        第一次加载 默认500毫秒开始回调，浏览器100毫秒回调
         做ls反缓,资源都通xhr请求，所以会跨域，资源在同一下域名
-        兼容性，ie9及以上，功能减少网络请求
+        兼容性，ie8及以上，功能减少网络请求
 
+		请查看console
+			
         作者：带着乌龟去看大海  联系我进群(293851491)@群主
  
 </pre>
